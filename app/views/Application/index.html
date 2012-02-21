@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+#{form @sendMail()}
+From:<br/>
+<input name="fromAddress"/><br/>
+To:<br/>
+<input name="toAddress"/><br/>
+Subject:<br/>
+<input name="subject"/><br/>
+Body:<br/>
+<textarea name="body" rows="5"></textarea><br/>
+<input type="submit"/>
+#{/form}

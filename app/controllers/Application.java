@@ -16,13 +16,13 @@ public class Application extends Controller {
         render();
     }
     
-    public static void sendMail(String fromAddress, String toAddress, String subject, String body) throws EmailException {
+    public static void sendMail(String fromAddress, String toAddress, String subject, String msg) throws EmailException {
         MultiPartEmail email = new MultiPartEmail();
 
         email.setFrom(fromAddress);
         email.addTo(toAddress);
         email.setSubject(subject);
-        email.setMsg(body);
+        email.setMsg(msg);
 
         Mail.send(email);
 
